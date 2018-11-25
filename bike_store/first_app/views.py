@@ -30,7 +30,7 @@ def add_customer_form(request):
 			form.save(commit=True)
 			return menu(request)
 		else:
-			print('Error - form in invalid')
+			print('Error - form is invalid')
 	return render(request, 'add_custo_form.html', { 'form' : form })
 
 def add_rental_form(request):
