@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bike Store Rental</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1><a href="/first_app/menu">Welcome Everyone This is the fucking {{ custo.first_name }}</a></h1>
+    {% for custo in customer%}
+    <h3> Informations about {{custo.first_name}} {{custo.last_name}}</h3>
+    <p> Country: {{custo.country}}</p>
+    <p> City: {{custo.city}}</p>
+    <p> Address: {{custo.address}}</p>
+    <p>Phone Number: {{custo.phone_number}}</p>
+    <p>Email: {{custo.email}}</p>
+    {%endfor%}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bike Store Rental</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1><a href="/first_app/menu">Welcome Everyone This is ma teub</a></h1>
+    {% for customer in customers%}
+
+	    <div>
+	    	<h3><a href="{{customer.id}}">{{customer.last_name}} {{customer.first_name}}</a></h3>
+	    </div>
+
+    {% endfor %}
+
+</body>
+</html>

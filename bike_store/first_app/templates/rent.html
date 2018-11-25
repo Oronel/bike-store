@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bike Store Rental</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1><a href="/first_app/menu">Welcome on est la pour niquer des meres</a></h1>
+
+    <div>
+
+        <h3>Customer Informations:<br><a href="/first_app/menu/customers/{{rental.0.customer.id}}/">{{rental.0.customer.first_name}} {{rental.0.customer.last_name}}</a> </h3>
+        
+    </div>
+
+    <div>
+        
+        <h3>Vehicle Informations:<br>{{rental.0.vehicle.vehicle_type}}</h3>
+        <p>Vehicle Size: {{rental.0.vehicle.size}}</p>
+        <p>Vehicle Cost:  {{rental.0.vehicle.real_cost |floatformat}} $</p>
+        <br>
+
+    </div>
+
+    <div>
+        <h3>Rental Informations:</h3>
+        <p>Rental date: {{rental.0.rental_date}}</p>
+    {% if rental.0.return_date is null %}
+
+    	<p>Hasn't been returned yet</p>
+
+    {% else %}
+    	<p>Returned on: {{ rental.0.return_date }}</p>
+
+    {% endif %}
+
+    </div>
+
+</body>
+</html>

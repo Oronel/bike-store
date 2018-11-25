@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Bike Store Rental</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1><a href="/first_app/menu">Welcome ta putain de salope de soeur</a></h1>
+    {% for rental in rentals%}
+
+    <div>
+    	<h3><a href="{{rental.id}}">Rental Date: {{ rental.rental_date}} Return Date:{{ rental.return_date}}.</a> </h3>
+    	<p>{{rental.customer.email}}</p>
+    </div>
+
+
+    {% endfor %}
+
+</body>
+</html>

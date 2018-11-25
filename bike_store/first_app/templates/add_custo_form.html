@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add customer</title>
+</head>
+<body>
+	<h1>This is to add customR like nixamR</h1>
+
+	<form method='POST'>
+	{{ form.as_p }}
+	{% csrf_token %}
+	<input type="submit" name="send">
+	
+	</form>
+
+</body>
+</html>

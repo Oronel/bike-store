@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Vehicle</title>
+</head>
+<body>
+	<h1>Add a fucking vehicle de cracko</h1>
+
+	<form method='POST'>
+	{{ form.as_p }}
+	{% csrf_token %}
+	<input type="submit" name="send">
+	
+	</form>
+
+</body>
+</html>
